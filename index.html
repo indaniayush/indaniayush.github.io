@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+	<head>
+		<b:include data='blog' name='all-head-content'/>
+		<title>
+			<b:if cond='data:blog.pageType == &quot;index&quot;'>
+				<data:blog.pageTitle/>
+				<b:else/>
+				<b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+					<data:blog.pageName/> | <data:blog.title/>
+					<b:else/>
+          Page Not Found | <data:blog.title/> 
+				</b:if>
+			</b:if>
+		</title>
+
+		<b:if cond='data:blog.pageType == &quot;archive&quot;'>
+			<meta content='noindex,noarchive' name='robots'/>
+		</b:if>
+		<meta charset='UTF-8'/>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+
+		<b:skin><![CDATA[
+			
+			/*
+//////////////////////////////////////////////////////////
+//                                                      //
+//  Blogger Template Style                              //
+//  Name       : Ayush Indani		                 //
+//  URL        : www.ayush-indani.blogspot.com          //
+//                                                      //
+//////////////////////////////////////////////////////////
+*/
+
+		
+		]]></b:skin>
+		<b:if cond='data:blog.pageType == &quot;item&quot;'>
+			<style type='text/css'>.post-body img { height:auto; max-width: 94%; margin: 0 3%; }</style>
+		</b:if>
+		<b:if cond='data:blog.url == data:blog.homepageUrl'>
+			<style type='text/css'>.sidebar #HTML100 { display: none; }</style>
+		</b:if>
+		<b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+			<style type='text/css'>.post-header{ display: none; }</style>
+		</b:if>
+
+
+		<meta charset='utf-8'/>
+		<meta content='width=1024' name='viewport'/>
+		<meta content='yes' name='apple-mobile-web-app-capable'/>
+		<title>Ayush Indani | Redefining Possibilities</title>
+
+		<meta content='Ayush Indani Profile' name='description'/>
+		<meta content='Ayush Indani' name='author'/>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet'/>
+
+
+		<link href='https://indaniayush.github.io/hostme/ayush-indani.css' rel='stylesheet'/>
+
+		<link href='favicon.png' rel='shortcut icon'/>
+		<link href='apple-touch-icon.png' rel='apple-touch-icon'/>
+
+
+		<!--Shorte.st script -->
+
+		<script type='text/javascript'>//<![CDATA[ 
+(function() {
+    var configuration = {
+    "token": "2348e74ba58f5e0f16976a051d94eade",
+    "excludeDomains": [
+        "ayush-indani.blogspot.com",
+        "penaway.blogspot.com"
+    ],
+    "capping": {
+        "limit": 5,
+        "timeout": 24
+    },
+    "exitScript": {
+        "enabled": true
+    }
+};
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = '//cdn.shorte.st/link-converter.min.js';
+    script.onload = script.onreadystatechange = function () {var rs = this.readyState; if (rs && rs != 'complete' && rs != 'loaded') return; shortestMonetization(configuration);};
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+})();
+//]]>
+		</script>                
+
+
+
+
+	</head>
+	<!--<body>-->
+	<body class='impress-not-supported'>
+		<div class='blogouter-wrapper'>
+			<header class='header-wrapper'>
+				<div class='ct-wrapper'>
+					<b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+<b:widget id='Header1' locked='true' title='Ayush Indani (Header)' type='Header' version='1'>
+  <b:widget-settings>
+    <b:widget-setting name='displayUrl'/>
+    <b:widget-setting name='displayHeight'>0</b:widget-setting>
+    <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+    <b:widget-setting name='useImage'>false</b:widget-setting>
+    <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+    <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+    <b:widget-setting name='displayWidth'>0</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+								<b:if cond='data:useImage'>
+									<b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
+										<!--
+      Show image as background to text. You can't really calculate the width
+      reliably in JS because margins are not taken into account by any of
+      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
+      width if the user is using shrink to fit.
+      This results in a margin-width's worth of pixels being cropped. If the
+      user is not using shrink to fit then we expand the header.
+      -->
+										<b:if cond='data:mobile'>
+											<div id='header-inner'>
+												<div class='titlewrapper' style='background: transparent'>
+													<h1 class='title' style='background: transparent; border-width: 0px'>
+														<b:include name='title'/>
+													</h1>
+												</div>
+												<b:include name='description'/>
+											</div>
+											<b:else/>
+											<div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                        + &quot;background-position: &quot;                        + data:backgroundPositionStyleStr + &quot;; &quot;                        + data:widthStyleStr                        + &quot;min-height: &quot; + data:height                        + &quot;_height: &quot; + data:height                        + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
+												<div class='titlewrapper' style='background: transparent'>
+													<h1 class='title' style='background: transparent; border-width: 0px'>
+														<b:include name='title'/>
+													</h1>
+												</div>
+												<b:include name='description'/>
+											</div>
+										</b:if>
+										<b:else/>
+										<!--Show the image only-->
+										<div id='header-inner'>
+											<a expr:href='data:blog.homepageUrl' style='display: block'>
+												<img expr:alt='data:title' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' style='display: block'/>
+											</a>
+											<!--Show the description-->
+											<b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
+												<b:include name='description'/>
+											</b:if>
+										</div>
+									</b:if>
+									<b:else/>
+									<!--No header image -->
+									<div id='header-inner'>
+										<div class='titlewrapper'>
+											<h1 class='title'>
+												<b:include name='title'/>
+											</h1>
+										</div>
+										<b:include name='description'/>
+									</div>
+								</b:if>
+							</b:includable>
+  <b:includable id='description'>
+								<div class='descriptionwrapper'>
+									<p class='description'>
+										<span>
+											<data:description/>
+										</span>
+									</p>
+								</div>
+							</b:includable>
+  <b:includable id='title'>
+								<b:if cond='data:blog.url == data:blog.homepageUrl'>
+									<data:title/>
+									<b:else/>
+									<a expr:href='data:blog.homepageUrl'>
+										<data:title/>
+									</a>
+								</b:if>
+							</b:includable>
+</b:widget>
+</b:section>
+				</div> 
+			</header>
+		</div>
+
+		<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+		<div class='fallback-message'>
+			<p>Your browser <b>doesn&#39;t support the features required</b> by this presentation, so you are presented with a simplified version of this presentation. For more details contact ayush.indani143@gmail.com</p>
+			<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+		</div>
+
+
+		<div id='impress'>
+
+
+			<div class='step slide' data-x='-1000' data-y='-1500' id='ayush'>
+				<q style='text-align:center'>
+
+        Hey!
+					<br/>
+					<img src='https://4.bp.blogspot.com/-YjIEvqxheog/V1cB9YXXKsI/AAAAAAAAAYw/eeXfD9Ei0-IFRRqp0T3I9aUiGmFiQ9J5QCLcB/s1600/ayush-indani_tag.JPG' style='padding-left:50px'/>
+
+
+				</q>
+
+				<div>
+					<br/>
+					<br/>
+					<q style=' text-align:center; font-size:15px'> www.ayush-indani.blogspot.com </q>
+
+				</div>
+
+
+
+
+			</div>
+
+			<p>
+
+			</p>
+			<div class='step slide' data-x='0' data-y='-1500'>
+				<q style='text-align:center;'>
+					<img src='https://3.bp.blogspot.com/-CMTGaDNcNwE/V1cMbdoR1AI/AAAAAAAAAZI/L-2Hbp5Zb1AD99XxBQrPRNRc-i3zjHB8QCLcB/s1600/rp.png' style='padding-top: 50px;'/>
+
+				</q>
+
+			</div>
+
+
+
+			<div class='step' data-scale='4' data-x='0' data-y='0' id='title'>
+				<span class='try'>welcome to</span>
+				<h1>Ayush-Indani</h1>
+				<span class='footnote'>  .Blogspot.com</span>
+			</div>
+
+
+			<div class='step' data-rotate='90' data-scale='5' data-x='850' data-y='3000' id='whoiam'>
+				<p>
+					<br/>
+					<br/>
+					<br/>
+					<strong> Who I am? </strong>
+					<br/>
+          &lt; Developer /&gt;
+ &#160;         &#160;         &#160;           ||&#160;        &#160;        &#160;      
+         &quot;Blogger&quot;
+					<br/>
+         ^ Dreamer ^
+        &#160;          &#160; &#160;      &#160;        &#160;        ||&#160;        &#160;             &#160;
+         * Gadget freak *
+					<br/>
+       @ Student @
+        &#160;          &#160; &#160;      &#160;        &#160;        ||&#160;        &#160;             &#160;
+         # Lazy #
+				</p>
+			</div>
+
+			<div class='step' data-rotate='180' data-scale='6' data-x='3500' data-y='2100' id='big'>
+				<p>Want to <b style='color:#00d3dc;height: 250px;width: 650px;'>know</b>
+					<span class='thoughts'>more..?</span>
+				</p>
+			</div>
+
+
+			<div class='step' data-rotate='300' data-scale='1' data-x='2825' data-y='2325' data-z='-3000' id='tiny'>
+				<img src='https://4.bp.blogspot.com/-VqmOvC8rvA8/V1chthgd5mI/AAAAAAAAAZg/WJVtu8tjVe4F--uit58cvST05AvYC4CqgCLcB/s1600/Ayush%2BIndani%2BCartoon.jpg'/>
+				<p style='font-size:20px;'>I am <strong style='color:#00d3dc;'>a Software developer</strong> for whom learning and reusing is everything. Full stack coding is my passion and whenever I get opportunity I develop or reuse new stuff and exploring new domains. I have been always fascinated by Internet and its possibilities that humans can achieve, and thus I am a web developer too. Obsessive about <strong style='color:#00d3dc;'>gadgets</strong>, I try to keep myself abreast with the latest technology and the creativity that comes along. I have been working on Java, Spring, RESTful Webservices, SQL, PL/SQL, HTML/CSS, JQuery, Javascript, AJAX and UNIX. In my view, technology should not be hindrance to solve problems and hence I am equally dexterous with both Windows and LINUX platforms.<br/>
+Further, <strong style='color:#00d3dc;'>I am an IT associate currently working with Tata Consultancy Services, Pune</strong>. In my free time I like writing interesting stuffs and reading others lately; I enjoy being alone at times and I call it as state of <strong style='color:#00d3dc;'>Constructive Idealness.</strong> And that&#39;s exactly when my contemplation begins.
+				</p>
+
+			</div>
+
+
+
+
+			<div class='step' data-rotate='270' data-scale='6' data-x='3500' data-y='-850' id='ing'>
+				<p>I am <b class='positioning' style='color:#b2bd14;'>associated with</b>
+
+					<table border='0' width='200'>
+						<tr>
+							<td>
+								<img src='https://indaniayush.github.io/hostme/google_developers.png'/>
+							</td>
+
+						</tr>
+						<tr>
+							<td>
+								<img height='157' src='https://indaniayush.github.io/hostme/tcs.png' width='522'/>
+							</td>
+						</tr>
+					</table>
+				</p>
+
+			</div>
+
+			<div class='step' data-scale='6' data-x='6700' data-y='-300' id='imagination'>
+				<p> What I am <b style='color:#00d3dc;'>good at?</b>
+				</p>
+				<br/>
+				<table border='0' width='200'>
+					<tr>
+						<td>
+							<img alt='Spring Framework' height='150' src='https://indaniayush.github.io/hostme/spring.jpg' width='150'/>
+						</td>
+						<td>
+							<img alt='JAVA' height='150' src='https://indaniayush.github.io/hostme/java.png' width='150'/>
+						</td>
+						<td>
+							<img alt='MySQL' height='150' src='https://indaniayush.github.io/hostme/mysql.png' width='150'/>
+						</td>
+						<td>
+							<img alt='PL/SQL' height='150' src='https://indaniayush.github.io/hostme/plsql-developer.png' width='150'/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img alt='JavaScript' height='150' src='https://indaniayush.github.io/hostme/js.png' width='150'/>
+						</td>
+						<td>
+							<img alt='HTML' height='150' src='https://indaniayush.github.io/hostme/html5.png' width='150'/>
+						</td>
+						<td>
+							<img alt='CSS' height='150' src='https://indaniayush.github.io/hostme/css.png' width='150'/>
+						</td>
+						<td>
+							<img alt='GIT' height='150' src='https://indaniayush.github.io/hostme/github-logo.png' width='150'/>
+						</td>
+					</tr>
+					<tr>
+							<td>
+								<img alt='UNIX' height='150' src='https://indaniayush.github.io/hostme/linux-512.png' width='150'/>
+							</td>
+							<td>
+								<img alt='Blogger' height='150' src='https://indaniayush.github.io/hostme/Blogger.png' width='150'/>
+							</td>
+
+							<!--<td>
+								<img height='150' src='https://googledrive.com/host/' width='150'/>
+							</td>
+							<td>
+								<img height='150' src='https://googledrive.com/host/' width='150'/>
+							</td>-->
+					</tr>
+
+					</table>
+
+
+
+				</div>
+
+				<div class='step' data-rotate='20' data-scale='4' data-x='6300' data-y='2000' id='source'>
+					<span style='font-size:45px;'>
+						<p>
+							<br/>
+							<br/>
+							<br/>
+                          ##Aspiring Youtuber## <br/><i>..(Planning really soon)..</i>
+							<br/>
+                          <img src='https://indaniayush.github.io/hostme/youtube.png' style=' margin-left: 175px; '/>
+							<br/>
+
+
+						</p>
+					</span>
+					<q/>
+				</div>
+
+				<div class='step' data-scale='2' data-x='6000' data-y='4000' id='one-more-thing'>
+					<p>
+						<span style='font-size:25px;'>
+       Well apart from Application Development I have a keen interest in <b style='color:#00d3dc;'> Sports and Blogging.</b> Broadly, I&#39;ve been playing sports my entire life. And, I am into <b style='color:#b2bd14;'>Blogging </b>from past 3-4 years. It makes me feel refreshed, creative and bring me closer to my inner soul. 
+
+
+						</span>
+					</p>
+				</div>
+
+
+				<div class='step' data-rotate-x='-40' data-rotate-y='10' data-scale='2' data-x='6200' data-y='4300' data-z='-100' id='its-in-3d'>
+					<br/>
+					<br/>
+					<div style='font-size:30px;'>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+						<p>
+
+
+							<span class='have'>Well-Well!! Its not over yet, you can contact me anytime:
+							</span>
+							<br/>
+							<br/>
+
+							<span class='noticed'>
+                              <strong style='color:#00d3dc;'><a href='http://sh.st/SG6sG' target='_blank'>LinkedIn</a></strong>
+							</span>
+
+							<span class='noticed'>
+                              <strong style='color:#00d3dc;'><a href='http://sh.st/SG55z' target='_blank'>Facebook</a></strong>
+							</span>
+
+
+							<span class='in'>
+                              <strong style='color:#00d3dc;'><a href='http://sh.st/SG5Kx' target='_blank'>Google Plus</a></strong> 
+							</span>
+		
+
+							<span class='in'>
+                              <strong style='color:#00d3dc;'><a href='http://sh.st/SG5Kx' target='_blank'>FeedBurner</a></strong>
+							</span>
+
+
+							<br/> 
+                          OR <br/>
+							<span class='you'>
+								<strong style='color:#b2bd14;'>Inbox me @:</strong> indaniayush@gmail.com</span> 
+
+							<br/>
+							
+
+
+						</p>
+
+
+					</div>
+
+
+					<span class='footnote'>
+
+					</span>
+				</div>
+
+
+
+
+				<div class='step' data-scale='10' data-x='3000' data-y='1500' id='overview'>
+				</div>
+
+			</div>
+
+
+
+
+
+
+			<div class='hint'>
+				<p>Use a spacebar or arrow keys to navigate</p>
+			</div>
+			<script>
+if (&quot;ontouchstart&quot; in document.documentElement) { 
+    document.querySelector(&quot;.hint&quot;).innerHTML = &quot;<p>Tap on the left or right to navigate</p>&quot;;
+}
+			</script>
+
+
+			<script src='https://indaniayush.github.io/hostme/ayush-indani.js'/>
+			<script>impress().init();</script>
+
+
+			<!-- End Script Code -->
+
+
+			<!--Comment Short.est script -->
+			<script type='text/javascript'>
+var shortest = {};
+shortest.config = {
+  token : &#39;2348e74ba58f5e0f16976a051d94eade&#39;,
+  commentMonetizer: {
+    enable: true
+  }
+};
+(function() {
+ var script = document.createElement(&#39;script&#39;);
+ script.async = true;
+ script.src = &#39;//cdn.shorte.st/link-converter.min.js&#39;;
+ var entry = document.getElementsByTagName(&#39;script&#39;)[0];
+ entry.parentNode.insertBefore(script, entry);
+})();
+			</script>                
+
+
+
+		</body>
+</html>
